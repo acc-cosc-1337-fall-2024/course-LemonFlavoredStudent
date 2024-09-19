@@ -12,3 +12,11 @@ TEST_CASE("Verify get_letter_grade_using_if")
 	REQUIRE("D"== get_letter_grade_using_if(65));
 	REQUIRE("F"== get_letter_grade_using_if(50));
 }
+TEST_CASE("Verify get_letter_grade_using_switch")
+{
+	REQUIRE("A"== get_letter_grade_using_switch(95));
+	REQUIRE("B"== get_letter_grade_using_switch(85));
+	REQUIRE("C"== get_letter_grade_using_switch(75));
+	REQUIRE("D"== get_letter_grade_using_switch(65));
+	REQUIRE("F"== get_letter_grade_using_switch(50));
+}

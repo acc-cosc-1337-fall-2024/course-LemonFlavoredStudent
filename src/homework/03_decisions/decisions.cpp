@@ -32,3 +32,26 @@ string get_letter_grade_using_if(int grade)
     }
     return letter_grade;
 }
+
+string get_letter_grade_using_switch(int grade)
+{
+    string letter_grade = "";
+
+    switch (grade)
+    {
+    case 90 ... 100:
+        letter_grade = "A"; break;
+    case 80 ... 89:
+        letter_grade = "B"; break;
+    case 70 ... 79:
+        letter_grade = "C"; break;
+    case 60 ... 69:
+        letter_grade = "D"; break;
+    case 0 ... 50:
+        letter_grade = "F"; break;
+    default:
+        letter_grade = "Invalid Value"; break;
+    }
+
+    return letter_grade;
+}
