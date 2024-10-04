@@ -41,13 +41,13 @@ string get_dna_compliment(string dna)
         {
             dna[i] = 'A';
         }
-        else if (dna[i] == 'G')
-        {
-            dna[i] == 'C';
-        }
         else if (dna[i] == 'C')
         {
-            dna[i] == 'G';
+            dna[i] = 'G';
+        }
+        else if (dna[i] == 'G')
+        {
+            dna[i] = 'C';
         }
    }
    return dna;
