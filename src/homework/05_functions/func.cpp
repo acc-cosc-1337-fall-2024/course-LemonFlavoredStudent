@@ -16,3 +16,13 @@ double get_gc_content(const string& dna)
     }
     return amount/dna.size();
 }
+
+string reverse_string(string dna)
+{
+    string newDna=dna;
+    for (int i = dna.size()-1; i >= 0; i--)
+    {
+        newDna[dna.size()-(i+1)] = dna[i];
+    }
+    return newDna;
+}
