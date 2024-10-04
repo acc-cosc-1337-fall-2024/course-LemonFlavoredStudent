@@ -13,4 +13,10 @@ TEST_CASE("Verify get_gc_content")
 TEST_CASE("Verify reverse_string")
 {
 	REQUIRE(reverse_string("AGCTATAG")=="GATATCGA");
+	REQUIRE(reverse_string("CGCTATAG")=="GATATCGC");
+}
+TEST_CASE("Verify get_dna_compliment")
+{
+	REQUIRE (get_dna_compliment("AAAACCCGGT")=="ACCGGGTTTT");
+	REQUIRE (get_dna_compliment("CCCGGAAAAT")=="ATTTTCCGGG");
 }

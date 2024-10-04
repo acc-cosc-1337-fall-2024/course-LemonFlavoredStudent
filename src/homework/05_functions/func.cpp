@@ -27,3 +27,29 @@ string reverse_string(string dna)
     dna = tempString;
     return dna;
 }
+
+string get_dna_compliment(string dna)
+{
+   dna = reverse_string(dna);
+   for (int i = 0; i<dna.size(); i++)
+   {
+        if (dna[i] == 'A')
+        {
+            dna[i] = 'T';
+        }   
+        else if (dna[i] == 'T')
+        {
+            dna[i] = 'A';
+        }
+        else if (dna[i] == 'G')
+        {
+            dna[i] == 'C';
+        }
+        else if (dna[i] == 'C')
+        {
+            dna[i] == 'G';
+        }
+   }
+   return dna;
+    
+}
