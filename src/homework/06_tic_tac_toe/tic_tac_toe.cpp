@@ -43,7 +43,7 @@ void TicTacToe::set_next_player()
 {
     if(player=="X")
     {
-        player = "Y";
+        player = "O";
     }
     else 
     {
