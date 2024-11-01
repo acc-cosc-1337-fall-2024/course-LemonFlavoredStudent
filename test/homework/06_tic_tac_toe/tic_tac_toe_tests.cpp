@@ -28,4 +28,22 @@ TEST_CASE("Test if the board is full")
 	game.mark_board(8);
 
 	REQUIRE(game.game_over()==true);
+	//REQUIRE(game.winner=="C"); Does not work because variable winner is private.
+	REQUIRE(game.get_winner()=="C");
+}
+
+TEST_CASE("Test first player set to X")
+{
+	TicTacToe game;
+
+	game.start_game("X");
+	REQUIRE(game.get_player()=="X");
+}
+
+TEST_CASE("Test first player set to O")
+{
+	TicTacToe game;
+
+	game.start_game("O");
+	REQUIRE(game.get_player()=="O");
 }

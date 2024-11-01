@@ -13,6 +13,7 @@ public:
     void mark_board(int position);
     std::string get_player() const{return player;};
     void display_board() const;
+    std::string get_winner() {return winner;};
 
 private:
     std::string winner;
