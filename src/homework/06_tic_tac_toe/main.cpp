@@ -13,12 +13,12 @@ int main()
 	
 	do
 	{
-		cout<<"Enter first player (X or Y): ";
+		cout<<"Enter first player (X or O): ";
 		cin>>first_player;
 
-		while (first_player != "X" && first_player != "Y")
+		while (first_player != "X" && first_player != "O")
 		{
-			cout<<"Invalid Input, Input First Player (X or Y): ";
+			cout<<"Invalid Input, Input First Player (X or O): ";
 			cin>>first_player;
 		}
 
@@ -32,6 +32,15 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+		}
+
+		if (game.get_winner()=="C")
+		{
+			cout<<"The game ended in a tie!\n";
+		}
+		else 
+		{
+			cout<<game.get_winner()<<" is the winner!\n";
 		}
 
 		cout<<"Play Again? Enter Y or y: ";
