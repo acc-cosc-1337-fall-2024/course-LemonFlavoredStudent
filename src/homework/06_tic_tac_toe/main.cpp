@@ -13,8 +13,14 @@ int main()
 	
 	do
 	{
-		cout<<"Enter first player: ";
+		cout<<"Enter first player (X or Y): ";
 		cin>>first_player;
+
+		while (first_player != "X" && first_player != "Y")
+		{
+			cout<<"Invalid Input, Input First Player (X or Y): ";
+			cin>>first_player;
+		}
 
 		game.start_game(first_player);
 
