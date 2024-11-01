@@ -47,3 +47,20 @@ TEST_CASE("Test first player set to O")
 	game.start_game("O");
 	REQUIRE(game.get_player()=="O");
 }
+TEST_CASE("Test win by first column")
+{
+	TicTacToe game;
+	
+	game.start_game("X");
+	game.mark_board(1);
+	REQUIRE(game.game_over()==false);
+	game.mark_board(2);
+	REQUIRE(game.game_over()==false);
+	game.mark_board(4);
+	REQUIRE(game.game_over()==false);
+	game.mark_board(5);
+	REQUIRE(game.game_over()==false);
+	game.mark_board(7);
+	REQUIRE(game.game_over()==true);
+	REQUIRE(game.get_winner()=="X");
+}

@@ -5,7 +5,7 @@ using std::cout;
 
 bool TicTacToe::game_over()
 {
-    //Check for Win
+    //Check for Win by Row
     if (check_row_win()||check_column_win()||check_diagonal_win())
     {
         set_winner();
@@ -93,9 +93,9 @@ void TicTacToe::set_winner()
 
 bool TicTacToe::check_column_win()
 {
-    if ((pegs[0]==player && pegs[3]==player && pegs[6]==player)||
-    (pegs[1]==player && pegs[4]==player && pegs[7]==player)||
-    (pegs[2]==player && pegs[5]==player && pegs[8]==player))
+    if ((pegs[0] != " " && pegs[0]==pegs[3] && pegs[3]==pegs[6])||
+    (pegs[1] != " " && pegs[1]==pegs[4] && pegs[4]==pegs[7])||
+    (pegs[2] != " " && pegs[2]==pegs[5] && pegs[5]==pegs[8]))
     {
         return true;
     }
@@ -107,9 +107,9 @@ bool TicTacToe::check_column_win()
 
 bool TicTacToe::check_row_win()
 {
-    if ((pegs[0]==player && pegs[1]==player && pegs[2]==player)||
-    (pegs[3]==player && pegs[4]==player && pegs[5]==player)||
-    (pegs[6]==player && pegs[7]==player && pegs[8]==player))
+    if ((pegs[0] != " " && pegs[0]==pegs[1] && pegs[1]==pegs[2])||
+    (pegs[3] != " " && pegs[3]==pegs[4] && pegs[4]==pegs[5])||
+    (pegs[6] != " " && pegs[6]==pegs[7] && pegs[7]==pegs[8]))
     {
         return true;
     }
@@ -121,8 +121,8 @@ bool TicTacToe::check_row_win()
 
 bool TicTacToe::check_diagonal_win()
 {
-    if ((pegs[0]==player && pegs[4]==player && pegs[8]==player)||
-    (pegs[2]==player && pegs[4]==player && pegs[6]==player))
+    if ((pegs[0] != " " && pegs[0]==pegs[4] && pegs[4]==pegs[8])||
+    (pegs[2] != " " && pegs[2]==pegs[4] && pegs[4]==pegs[6]))
     {
         return true;
     }
