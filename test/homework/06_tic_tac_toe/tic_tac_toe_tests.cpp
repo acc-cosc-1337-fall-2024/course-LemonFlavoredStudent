@@ -188,6 +188,7 @@ TEST_CASE("Test TicTacToe manager get winner total function - simulate playing 3
 {
 	TicTacToe game;
 	TicTacToeManager manager;
+	int o,x,t;
 	
 	game.start_game("X");
 	game.mark_board(7);
@@ -242,5 +243,9 @@ TEST_CASE("Test TicTacToe manager get winner total function - simulate playing 3
 
 	manager.save_game(game);
 
-	manager.get_winner_total();
+	manager.get_winner_total(o,x,t);
+
+	REQUIRE(o==1);
+	REQUIRE(x==1);
+	REQUIRE(t==1);
 }
