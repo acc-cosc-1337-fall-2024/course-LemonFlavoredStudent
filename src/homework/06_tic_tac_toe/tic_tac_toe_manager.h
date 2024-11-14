@@ -1,6 +1,7 @@
 //h
 #include "tic_tac_toe.h"
 #include <vector>
+#include <memory>
 #include <string>
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
@@ -8,12 +9,12 @@
 class TicTacToeManager
 {
 public:
-    void save_game(TicTacToe b);
+    void save_game(std::unique_ptr<TicTacToe>& b);
     void get_winner_total(int& o, int& x, int& t);
 
 
 private:
-    std::vector<TicTacToe>games;
+    std::vector<std::unique_ptr<TicTacToe>>games;
     int x_win = 0;
     int o_win = 0;
     int ties = 0;
