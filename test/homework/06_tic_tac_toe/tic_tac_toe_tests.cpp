@@ -208,6 +208,7 @@ TEST_CASE("Test TicTacToe manager get winner total function - simulate playing 3
 	REQUIRE(game->get_winner()=="X");
 
 	manager.save_game(game);
+	game = make_unique<TicTacToe3>();
 
 	game->start_game("O");
 	game->mark_board(7);
@@ -223,6 +224,7 @@ TEST_CASE("Test TicTacToe manager get winner total function - simulate playing 3
 	REQUIRE(game->get_winner()=="O");
 
 	manager.save_game(game);
+	game = make_unique<TicTacToe3>();
 
 	game->start_game("X");
 	game->mark_board(1);
@@ -252,4 +254,5 @@ TEST_CASE("Test TicTacToe manager get winner total function - simulate playing 3
 	REQUIRE(o==1);
 	REQUIRE(x==1);
 	REQUIRE(t==1);
+	
 }
