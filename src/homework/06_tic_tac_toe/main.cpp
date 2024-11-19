@@ -63,6 +63,7 @@ int main()
 			cout<<game->get_winner()<<" is the winner!\n";
 		}
 		manager.save_game(game);
+		
 		manager.get_winner_total(o,x,t);
 		cout<<"Current Score: O has won "<<o<<" times, X has won "<<x<<" times, and there has been "<<t<<" ties.\n";
 
